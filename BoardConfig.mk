@@ -34,6 +34,7 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_
 # Kernel [Build]
 TARGET_KERNEL_CONFIG := sultan_defconfig
 BUILD_KERNEL := true
+TARGET_PREBUILT_KERNEL := device/htc/pyramid/prebuilt/zImage
 
 # Bluetooth/Wifi
 -include device/htc/msm8660-common/bcmdhd.mk
@@ -51,3 +52,8 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776192
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 838859776
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1252770816
 BOARD_FLASH_BLOCK_SIZE := 262144
+
+# TWRP
+DEVICE_RESOLUTION := 540x960
+TW_INCLUDE_DUMLOCK := true
+HAVE_SELINUX := true
