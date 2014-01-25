@@ -24,6 +24,7 @@
 -include device/htc/msm8660-common/BoardConfigCommon.mk
 
 # Bootloader
+TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := pyramid
 
 # Kernel [Settings]
@@ -32,8 +33,8 @@ BOARD_KERNEL_PAGE_SIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=pyramid no_console_suspend=1
 
 # Kernel [Build]
-TARGET_KERNEL_CONFIG := sultan_defconfig
-BUILD_KERNEL := true
+# TARGET_KERNEL_CONFIG := sultan_defconfig
+# BUILD_KERNEL := true
 TARGET_PREBUILT_KERNEL := device/htc/pyramid/prebuilt/zImage
 
 # Bluetooth/Wifi
